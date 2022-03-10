@@ -1,0 +1,33 @@
+<html>
+    <header>
+
+        <Script Language="Javascript">
+            class Jour{
+                constructor(nbRepas, quantiteTotaleMange){
+                    this.nbRepas=nbRepas;
+                    this.quantiteTotaleMange=quantiteTotaleMange;
+                }
+            }
+
+            class profilAnimal{
+                constructor(idAnimal, nom, nbRepasMax, doseMax, journee){
+                    this.idAnimal = idAnimal;
+                    this.nom = nom;
+                    this.nbRepasMax = nbRepasMax;
+                    this.doseMax = doseMax;
+                    this.journal = new Array();
+                    this.journal.push(journee);
+                }
+            }
+        </Script>
+    </header>
+    <body>
+        <Script Language="Javascript">
+            var wow = new Jour(3,1200);
+            var chienMax = new profilAnimal(1,'Max',3,1200,wow);
+            chienMax.journal.push(wow);
+            document.write(chienMax.journal[0].nbRepas);
+
+        </Script>
+    </body>
+</html>
